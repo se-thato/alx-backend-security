@@ -28,7 +28,6 @@ INSTALLED_APPS = [
 
     'ip_tracking', 
     'blacklist',
-    'ratelimit',
 ]
 
 MIDDLEWARE = [
