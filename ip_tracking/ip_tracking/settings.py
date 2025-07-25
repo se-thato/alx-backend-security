@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'ip_tracking', 
+    'blacklist',
+    'ratelimit',
 ]
 
 MIDDLEWARE = [
@@ -39,6 +41,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'ip_tracking.middleware.LogRequestMiddleware',  # Custom middleware for logging requests
+    'blacklist.middleware.BlockIPMiddleware',  # Middleware to block IPs
 ]
 
 ROOT_URLCONF = 'ip_tracking.urls'
